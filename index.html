@@ -1,0 +1,365 @@
+[2:09 PM, 7/12/2026] ALeya Fatima Soomro: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 - Responsive Web Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f9ff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0b3d91;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* Hero */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px 8%;
+    gap:40px;
+}
+
+.hero-text{
+    flex:10;
+}
+
+.hero-text h1{
+    font-size:clamp(2rem,5vw,4rem);
+    color:#0b3d91;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0b3d91;
+    color:white;
+    padding:12px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#1f6bff;
+}
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:700px;
+    height:400px;
+    border-radius:15px;
+}
+
+/* About */
+
+.about{
+    padding:90px 8%;
+    text-align:center;
+}
+
+.about h2{
+    font-size:40px;
+    color:#0b3d91;
+    margin-bottom:20px;
+}
+
+/* Features */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:80px 8%;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(196, 13, 209, 0.15);
+    transition:.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background-color: rgba(214, 223, 220, 0.466);
+}
+
+.card h3{
+    color:#2c59ad;
+    margin-bottom:16px;
+     flex:12;
+}
+
+/* Contact */
+
+.contact{
+    padding:70px 8%;
+    text-align:center;
+}
+
+.contact form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.contact button{
+    background:#0b3d91;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact button:hover{
+    background:#1f6bff;
+}
+
+/* Footer */
+
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+nav ul{
+    gap:15px;
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero{
+    padding:50px 5%;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:2.3rem;
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.logo{
+    font-size:22px;
+}
+
+.hero-text p{
+    font-size:16px;
+}
+
+.btn{
+    width:100%;
+    text-align:center;
+}
+
+.contact button{
+    width:100%;
+}
+}
+</style>
+<header>
+    <div class="logo">DecodeLabs</div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <h1>Responsive Web Layout</h1>
+        <p>
+            Build websites that look beautiful on Mobile,
+            Tablet and Desktop using HTML, CSS, Flexbox,
+            Grid and Media Queries.
+        </p>
+
+        <a href="#about" class="btn">Learn More</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="images.jpg" alt="Responsive Design">
+    </div>
+</section>
+
+<section class="about" id="about">
+
+<h2>About Responsive Design</h2>
+
+<p>
+Responsive Web Design allows a website to automatically adjust according to different screen sizes. It improves user experience on every device.
+</p>
+
+</section>
+
+<section class="features" id="features">
+
+<div class="card">
+<h3>Flexbox</h3>
+<p>
+Arrange items in rows and columns easily using Flexbox.
+</p>
+</div>
+
+<div class="card">
+<h3>CSS Grid</h3>
+<p>
+Create modern layouts using two-dimensional Grid System.
+</p>
+</div>
+
+<div class="card">
+<h3>Media Queries</h3>
+<p>
+Change the layout according to mobile, tablet and desktop screen sizes.
+</p>
+</div>
+
+<div class="card">
+<h3>Fluid Typography</h3>
+<p>
+Use clamp() so text automatically adjusts on every screen.
+</p>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 DecodeLabs | Responsive Web Layout Project</p>
+
+</footer>
+
+</body>
+</html>
+[2:09 PM, 7/12/2026] ALeya Fatima Soomro: 
